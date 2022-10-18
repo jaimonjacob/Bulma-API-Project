@@ -13,6 +13,7 @@ const params = {
 async function getData() {
   const response = await fetch(url, params);
   const jsonData = await response.json();
+  console.log("fetched")
 
   jsonData.data.forEach(function (entry) {
     const artTitle = entry.title;
