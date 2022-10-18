@@ -20,17 +20,28 @@
 
   <section>
     <div class="has-text-centered has-background-light p-3">
-    <h3>This site is an API testing site created by Jaimon. Currently, it shows you the Cleveland Art Gallery assets through the REST API. Please use the Refresh button to see the latest art work.</h3>
+    <h3>This site is an API testing app created by Jaimon. Currently, it shows you the Cleveland Art Gallery assets through the REST API. Please use the Refresh button to see the latest art work.</h3>
     </div>
   </section>
   <section>
-
     <div class="container">
       <div class="buttons refreshButton p-3">
-        <button class="button is-primary updateButton">Update</button>
+        <button class="button is-primary updateButton">Refresh</button>
       </div>
     </div>
+  </section>
+  
+  <section class="loading">
+    <div class="container columns is-centered">
+      <div class="columns is-mobile is-centered">
+        <div class="column is-narrow">
+          <div class="loader" id="loader">
+          </div>
+          </p>
+        </div>
+      </div>
 
+    </div>
   </section>
 
   <section class="section">
