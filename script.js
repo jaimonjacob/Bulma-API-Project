@@ -1,5 +1,6 @@
 const artContainer = document.querySelector('.cardsContainer');
 const buttonRefreshData = document.querySelector(`.refreshButton`);
+const loadingAnim = document.querySelector(`.loading`);
 
 const url =
   'https://openaccess-api.clevelandart.org/api/artworks?opened_after=2021&limit=50&has_image=1';
@@ -11,10 +12,11 @@ const params = {
 };
 
 async function getData() {
+  loadingAnim.style.display = 'block';  
   const response = await fetch(url, params);
   const jsonData = await response.json();
-  console.log("fetched")
-
+  loadingAnim.style.display = 'none';
+  console.log("done");
   jsonData.data.forEach(function (entry) {
     const artTitle = entry.title;
     const artDescription = entry.wall_description.slice(0, 100) + `...`;
